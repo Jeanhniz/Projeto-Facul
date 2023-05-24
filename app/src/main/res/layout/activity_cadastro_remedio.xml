@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroRemedio">
+
+    <View
+        android:id="@+id/imagemMedicamentos"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/container_remedio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="2000dp"
+        android:src="@drawable/ic_add_circle"
+        app:layout_constraintStart_toStartOf="@id/imagemMedicamentos"
+        app:layout_constraintEnd_toEndOf="@id/imagemMedicamentos"
+        app:layout_constraintTop_toTopOf="@id/imagemMedicamentos"
+        app:layout_constraintBottom_toBottomOf="@id/imagemMedicamentos"/>
+
+    <TextView
+        android:id="@+id/text_Nao_tem_medicamentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Você ainda não tem medicamentos adicionados."
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imagemMedicamentos"/>
+
+    <TextView
+        android:id="@+id/text_informacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="84dp"
+        android:text="Para cadastrar um medicamento clieque no botão cadastrar, selecione o medicamento que voçê deseja registrar e preencha as informações."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/text_Nao_tem_medicamentos" />
+
+    <Button
+        android:id="@+id/bt_Cadastrar_Medicamentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/blue_200"
+        android:drawableLeft="@drawable/ic_baseline_add_circle_outline_24"
+        android:onClick="cadastrar"
+        android:padding="20dp"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/text_informacoes"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_search"
+        android:padding="5dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="560dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
